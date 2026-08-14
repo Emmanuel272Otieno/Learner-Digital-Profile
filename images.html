@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Images</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>💻 Learner Profile</h2>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="images.html">Images</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <p class="small-title">
+                MY CODING JOURNEY
+            </p>
+
+            <h1>🖼️ My Coding Gallery</h1>
+
+            <p>
+                Images showing my coding skills and projects.
+            </p>
+
+            <input
+                type="text"
+                id="searchInput"
+                class="search"
+                placeholder="Search images..."
+            >
+
+        </section>
+
+
+        <section class="gallery">
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/coding-workspace.png"
+                    alt="Coding workspace"
+                >
+
+                <h3>🖥️ Coding Workspace</h3>
+
+                <p>
+                    My coding workspace.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/coding-workspace.png"
+                    data-title="Coding Workspace"
+                >
+                    <img src="images/coding-workspace.png" alt="Coding workspace">
+                </button>
+
+            </div>
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/html.png"
+                    alt="HTML"
+                >
+
+                <h3>HTML</h3>
+
+                <p>
+                    HTML creates the structure of websites.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/html.png"
+                    data-title="HTML"
+                >
+                    
+<img src="images/html.png" alt="HTML">
+                </button>
+
+            </div>
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/css.png"
+                    alt="CSS"
+                >
+
+                <h3>CSS</h3>
+
+                <p>
+                    CSS makes websites attractive.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/css.png"
+                    data-title="CSS"
+                >
+                    
+<img src="images/css.png" alt="CSS">
+                </button>
+
+            </div>
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/javascript.png"
+                    alt="JavaScript"
+                >
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    JavaScript makes websites interactive.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/javascript.png"
+                    data-title="JavaScript"
+                >
+            
+<img src="images/javascript.png" alt="JavaScript">
+                </button>
+
+            </div>
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/website-project.png"
+                    alt="Website project"
+                >
+
+                <h3>🌐 Website Project</h3>
+
+                <p>
+                    My web development project.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/website-project.png"
+                    data-title="Website Project"
+                >
+                    
+<img src="images/website-project.png" alt="Website project">
+                </button>
+
+            </div>
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/certificate.png"
+                    alt="Certificate"
+                >
+
+                <h3>📜 Certificate</h3>
+
+                <p>
+                    My coding achievement.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/certificate.png"
+                    data-title="Certificate"
+                >
+                    <img src="images/certificate.png" alt="Certificate">
+                </button>
+
+            </div>
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/profile-photo.png"
+                    alt="Profile photo"
+                >
+
+                <h3>👤 Profile Photo</h3>
+
+                <p>
+                    My learner profile.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/profile-photo.png"
+                    data-title="Profile Photo"
+                >
+                    <img src="images/profile-photo.png" alt="Emmanuel profile photo">
+                </button>
+
+            </div>
+
+
+            <div class="image-card">
+
+                <img
+                    src="images/hero-coding-illustration.png"
+                    alt="Coding illustration"
+                >
+
+                <h3>💻 Coding Illustration</h3>
+
+                <p>
+                    An illustration of my coding journey.
+                </p>
+
+                <button
+                    class="view-btn"
+                    data-image="images/hero-coding-illustration.png"
+                    data-title="Coding Illustration"
+                >
+                    <img src="images/hero-coding-illustration.png"
+     alt="Coding illustration">
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Image popup -->
+
+    <div id="imageModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal">
+                ×
+            </button>
+
+            <img id="modalImage" src="" alt="">
+
+            <h2 id="modalTitle"></h2>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 Emmanuel | My Digital Learner Profile
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

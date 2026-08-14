@@ -72,3 +72,699 @@ li {
 #goalCount {
   font-size: 22px;
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    background: #071a36;
+    color: white;
+
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.navbar h2 {
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 8px;
+}
+
+.nav-links a:hover {
+    color: #42b8ff;
+}
+
+
+/* MAIN */
+
+main {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 40px auto 60px;
+}
+
+
+/* HERO */
+
+.hero {
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 40px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.small-title {
+    color: #1769d1;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 55px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #1769d1;
+}
+
+.hero p {
+    color: #667085;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: 100%;
+
+    max-height: 350px;
+
+    object-fit: contain;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+
+    background: #1769d1;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin: 5px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0b4c9e;
+
+    transform: translateY(-2px);
+}
+
+.second-btn {
+    background: transparent;
+
+    color: #1769d1;
+
+    border: 2px solid #1769d1;
+}
+
+
+/* SECTIONS */
+
+.section {
+    margin-top: 35px;
+}
+
+.section > h2 {
+    margin-bottom: 15px;
+}
+
+
+/* PROFILE */
+
+.profile-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.profile-card img {
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* GOALS */
+
+.goal-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.goal-card ul {
+    list-style: none;
+}
+
+.goal-card li {
+    padding: 12px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.goal-card li::before {
+    content: "✓";
+
+    color: #168343;
+
+    font-weight: bold;
+
+    margin-right: 10px;
+}
+
+.goal-form {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.goal-form input {
+    flex: 1;
+}
+
+
+/* INPUTS */
+
+input,
+textarea,
+.search {
+    padding: 13px;
+
+    border: 1px solid #ccd4df;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #1769d1;
+}
+
+
+/* COUNTER */
+
+.counter-card {
+    background: #eaf8ef;
+
+    border: 1px solid #ccebd8;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.counter-card strong {
+    font-size: 35px;
+
+    color: #168343;
+}
+
+
+/* TECHNIQUE */
+
+.technique-card {
+    background: white;
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-left: 5px solid #f0bb3e;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* PAGE HEADER */
+
+.page-header {
+    background: white;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.page-header h1 {
+    font-size: 40px;
+}
+
+
+/* ABOUT */
+
+.about-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+.about-card img {
+    width: 250px;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.skills {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.skills span {
+    background: #1769d1;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+}
+
+.two-cards {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+.card li {
+    margin: 10px 0;
+
+    list-style: none;
+}
+
+.card li::before {
+    content: "✓";
+
+    color: #168343;
+
+    margin-right: 10px;
+}
+
+
+/* GALLERY */
+
+.search {
+    width: 80%;
+
+    max-width: 500px;
+
+    margin-top: 20px;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.image-card {
+    background: white;
+
+    padding-bottom: 20px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-card img {
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+}
+
+.image-card h3,
+.image-card p {
+    margin-left: 18px;
+
+    margin-right: 18px;
+}
+
+.image-card h3 {
+    margin-top: 15px;
+}
+
+.image-card p {
+    color: #667085;
+}
+
+.view-btn {
+    margin: 15px 18px 0;
+
+    background: #1769d1;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 200;
+}
+
+.modal-content {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    max-width: 800px;
+
+    width: 90%;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+
+    max-height: 70vh;
+
+    object-fit: contain;
+}
+
+#closeModal {
+    position: absolute;
+
+    right: 15px;
+
+    top: 10px;
+
+    border: none;
+
+    background: #071a36;
+
+    color: white;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* CONTACT */
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 25px;
+}
+
+.contact-form,
+.contact-info {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.contact-form label {
+    display: block;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+#formMessage {
+    color: #168343;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #071a36;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-card {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .gallery,
+    .two-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .goal-form,
+    .technique-card {
+        flex-direction: column;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+}

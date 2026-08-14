@@ -1,186 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learner Digital Profile</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Learner Profile</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>My Digital Learner Profile</h1>
-    <p>Track my coding journey and goals</p>
-  </header>
+    <nav class="navbar">
 
-  <main>
+        <h2>💻 Learner Profile</h2>
 
-    <!-- Learner Profile -->
-    <section class="profile">
-      <h2>Learner Profile</h2>
-      <p><strong>Name:</strong> Emmanuel</p>
-      <p><strong>Learning:</strong> Web Development</p>
-      <p><strong>Skills:</strong> HTML, CSS and JavaScript</p>
-    </section>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="images.html">Images</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
-    <!-- Coding Goals -->
-    <section class="goals">
-      <h2>My Coding Goals</h2>
+    </nav>
 
-      <input type="text" id="goalInput" placeholder="Enter a new coding goal">
-      <button id="addGoalBtn">Add Goal</button>
 
-      <ul id="goalList">
-        <li>Learn HTML</li>
-        <li>Learn CSS</li>
-        <li>Learn JavaScript</li>
-      </ul>
-    </section>
+    <main>
 
-    <!-- Technique of the Day -->
-    <section class="technique">
-      <h2>Technique of the Day</h2>
+        <section class="hero">
 
-      <p id="techniqueText">Click the button to get a coding technique.</p>
+            <div class="hero-text">
 
-      <button id="techniqueBtn">Show Technique</button>
-    </section>
+                <p class="small-title">
+                    MY CODING JOURNEY
+                </p>
 
-    <!-- Counter -->
-    <section class="counter">
-      <h2>Goals Counter</h2>
-      <p>You have <span id="goalCount">3</span> coding goals.</p>
-    </section>
+                <h1>
+                    My Digital
+                    <span>Learner Profile</span>
+                </h1>
 
-  </main>
+                <p>
+                    Track my coding journey and goals as I learn
+                    HTML, CSS and JavaScript.
+                </p>
 
-  <script src="script.js"></script>
-<script>const goalInput = document.getElementById("goalInput");
-const addGoalBtn = document.getElementById("addGoalBtn");
-const goalList = document.getElementById("goalList");
-const goalCount = document.getElementById("goalCount");
+                <a href="about.html" class="btn">
+                    Learn About Me
+                </a>
 
-const techniqueBtn = document.getElementById("techniqueBtn");
-const techniqueText = document.getElementById("techniqueText");
+                <a href="images.html" class="btn second-btn">
+                    View My Work
+                </a>
 
-const techniques = [
-  "Practice writing clean HTML.",
-  "Use meaningful class names in CSS.",
-  "Use JavaScript functions to organize your code.",
-  "Test your website in the browser.",
-  "Use comments to explain difficult code.",
-  "Practice solving small coding problems.",
-  "Keep your code properly formatted."
-];
+            </div>
 
-// Add a new goal
-addGoalBtn.addEventListener("click", function () {
+            <div class="hero-image">
 
-  const goal = goalInput.value.trim();
+                <img
+                    src="images/hero-coding-illustration.png"
+                    alt="Coding illustration"
+                >
 
-  if (goal === "") {
-    alert("Please enter a coding goal.");
-    return;
-  }
+            </div>
 
-  const newGoal = document.createElement("li");
-  newGoal.textContent = goal;
+        </section>
 
-  goalList.appendChild(newGoal);
 
-  goalInput.value = "";
+        <!-- Learner Profile -->
 
-  updateGoalCount();
-});
+        <section class="section">
 
-// Update number of goals
-function updateGoalCount() {
-  const numberOfGoals = goalList.children.length;
-  goalCount.textContent = numberOfGoals;
-}
+            <h2>👤 Learner Profile</h2>
 
-// Display a random technique
-techniqueBtn.addEventListener("click", function () {
+            <div class="profile-card">
 
-  const randomNumber = Math.floor(Math.random() * techniques.length);
+                <img
+                    src="images/profile-photo.png"
+                    alt="Learner profile photo"
+                >
 
-  techniqueText.textContent = techniques[randomNumber];
-});</script>
-</body>
-  <style>* {
-  box-sizing: border-box;
-}
+                <div>
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f7fb;
-  color: #222;
-}
+                    <h3>Emmanuel</h3>
 
-header {
-  text-align: center;
-  background: #1e3a5f;
-  color: white;
-  padding: 30px;
-}
+                    <p>
+                        <strong>Learning:</strong>
+                        Web Development
+                    </p>
 
-header h1 {
-  margin-bottom: 10px;
-}
+                    <p>
+                        <strong>Skills:</strong>
+                        HTML, CSS and JavaScript
+                    </p>
 
-main {
-  width: 90%;
-  max-width: 800px;
-  margin: 30px auto;
-}
+                </div>
 
-section {
-  background: white;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
+            </div>
 
-h2 {
-  color: #1e3a5f;
-}
+        </section>
 
-input {
-  padding: 12px;
-  width: 70%;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
 
-button {
-  padding: 12px 18px;
-  border: none;
-  border-radius: 5px;
-  background: #1e3a5f;
-  color: white;
-  cursor: pointer;
-  margin-left: 5px;
-}
+        <!-- Coding Goals -->
 
-button:hover {
-  background: #315f91;
-}
+        <section class="section">
 
-li {
-  margin: 10px 0;
-  padding: 8px;
-}
+            <h2>🎯 My Coding Goals</h2>
 
-#techniqueText {
-  font-size: 18px;
-  font-weight: bold;
-}
+            <div class="goal-card">
 
-#goalCount {
-  font-size: 22px;
-}</style>
+                <ul id="goalList">
+
+                    <li>Learn HTML</li>
+
+                    <li>Learn CSS</li>
+
+                    <li>Learn JavaScript</li>
+
+                    <li>Create a personal portfolio</li>
+
+                </ul>
+
+
+                <div class="goal-form">
+
+                    <input
+                        type="text"
+                        id="goalInput"
+                        placeholder="Enter a new coding goal"
+                    >
+
+                    <button
+                        id="addGoalBtn"
+                        class="btn"
+                    >
+                        Add Goal
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Goal Counter -->
+
+        <section class="counter-card">
+
+            <h2>📊 Goals Counter</h2>
+
+            <p>
+                You have
+                <strong id="goalCount">4</strong>
+                coding goals.
+            </p>
+
+        </section>
+
+
+        <!-- Technique -->
+
+        <section class="technique-card">
+
+            <div>
+
+                <p class="small-title">
+                    DAILY PRACTICE
+                </p>
+
+                <h2>
+                    💡 Technique of the Day
+                </h2>
+
+                <p id="techniqueText">
+                    Practice solving small coding problems.
+                </p>
+
+            </div>
+
+            <button
+                id="techniqueBtn"
+                class="btn"
+            >
+                Show Technique
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Emmanuel | My Digital Learner Profile
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
