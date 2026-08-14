@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learner Digital Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>My Digital Learner Profile</h1>
+    <p>Track my coding journey and goals</p>
+  </header>
+
+  <main>
+
+    <!-- Learner Profile -->
+    <section class="profile">
+      <h2>Learner Profile</h2>
+      <p><strong>Name:</strong> Emmanuel</p>
+      <p><strong>Learning:</strong> Web Development</p>
+      <p><strong>Skills:</strong> HTML, CSS and JavaScript</p>
+    </section>
+
+    <!-- Coding Goals -->
+    <section class="goals">
+      <h2>My Coding Goals</h2>
+
+      <input type="text" id="goalInput" placeholder="Enter a new coding goal">
+      <button id="addGoalBtn">Add Goal</button>
+
+      <ul id="goalList">
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+      </ul>
+    </section>
+
+    <!-- Technique of the Day -->
+    <section class="technique">
+      <h2>Technique of the Day</h2>
+
+      <p id="techniqueText">Click the button to get a coding technique.</p>
+
+      <button id="techniqueBtn">Show Technique</button>
+    </section>
+
+    <!-- Counter -->
+    <section class="counter">
+      <h2>Goals Counter</h2>
+      <p>You have <span id="goalCount">3</span> coding goals.</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+<script>const goalInput = document.getElementById("goalInput");
+const addGoalBtn = document.getElementById("addGoalBtn");
+const goalList = document.getElementById("goalList");
+const goalCount = document.getElementById("goalCount");
+
+const techniqueBtn = document.getElementById("techniqueBtn");
+const techniqueText = document.getElementById("techniqueText");
+
+const techniques = [
+  "Practice writing clean HTML.",
+  "Use meaningful class names in CSS.",
+  "Use JavaScript functions to organize your code.",
+  "Test your website in the browser.",
+  "Use comments to explain difficult code.",
+  "Practice solving small coding problems.",
+  "Keep your code properly formatted."
+];
+
+// Add a new goal
+addGoalBtn.addEventListener("click", function () {
+
+  const goal = goalInput.value.trim();
+
+  if (goal === "") {
+    alert("Please enter a coding goal.");
+    return;
+  }
+
+  const newGoal = document.createElement("li");
+  newGoal.textContent = goal;
+
+  goalList.appendChild(newGoal);
+
+  goalInput.value = "";
+
+  updateGoalCount();
+});
+
+// Update number of goals
+function updateGoalCount() {
+  const numberOfGoals = goalList.children.length;
+  goalCount.textContent = numberOfGoals;
+}
+
+// Display a random technique
+techniqueBtn.addEventListener("click", function () {
+
+  const randomNumber = Math.floor(Math.random() * techniques.length);
+
+  techniqueText.textContent = techniques[randomNumber];
+});</script>
+</body>
+  <style>* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f7fb;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  background: #1e3a5f;
+  color: white;
+  padding: 30px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #1e3a5f;
+}
+
+input {
+  padding: 12px;
+  width: 70%;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  background: #1e3a5f;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+button:hover {
+  background: #315f91;
+}
+
+li {
+  margin: 10px 0;
+  padding: 8px;
+}
+
+#techniqueText {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#goalCount {
+  font-size: 22px;
+}</style>
+</body>
+</html>
