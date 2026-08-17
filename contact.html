@@ -2,145 +2,1182 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Contact Me</title>
+    <title>Contact | Learner Profile</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
+
 
 <body>
 
+    <!-- NAVIGATION -->
+
     <nav class="navbar">
 
-        <h2>💻 Learner Profile</h2>
+        <a href="index.html" class="logo">
+            💻 Learner Profile
+        </a>
 
-        <div class="nav-links">
+        <ul class="nav-links">
 
-            <a href="index.html">Home</a>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-            <a href="about.html">About</a>
+            <li>
+                <a href="about.html">About</a>
+            </li>
 
-            <a href="images.html">Images</a>
+            <li>
+                <a href="images.html">Images</a>
+            </li>
 
-            <a href="contact.html">Contact</a>
+            <li>
+                <a
+                    href="contact.html"
+                    class="active"
+                >
+                    Contact
+                </a>
+            </li>
 
-        </div>
+        </ul>
+
+        <button
+            id="themeBtn"
+            class="theme-btn"
+            title="Change theme"
+        >
+            🌙
+        </button>
 
     </nav>
 
 
-    <main>
+    <!-- HERO -->
 
-        <section class="page-header">
+    <header class="contact-hero">
 
-            <p class="small-title">
-                LET'S CONNECT
-            </p>
+        <div class="contact-icon">
+            📧
+        </div>
 
-            <h1>📧 Contact Me</h1>
+        <p class="small-title">
+            LET'S CONNECT
+        </p>
 
-            <p>
-                Send me a message using the form below.
-            </p>
+        <h1>
+            Contact Me
+        </h1>
+
+        <p>
+            Have a question or want to say hello?
+            I'd love to hear from you.
+        </p>
+
+    </header>
+
+
+    <main class="contact-container">
+
+
+        <!-- CONTACT CONTENT -->
+
+        <section class="contact-layout">
+
+
+            <!-- FORM -->
+
+            <div class="contact-form-card">
+
+                <div class="form-heading">
+
+                    <span>💬</span>
+
+                    <div>
+
+                        <p class="small-title">
+                            SEND A MESSAGE
+                        </p>
+
+                        <h2>
+                            Let's Talk
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form id="contactForm">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                             Emmanuel Otieno
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                        <small
+                            id="nameError"
+                            class="error"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            📧 Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                        <small
+                            id="emailError"
+                            class="error"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            💬 Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="6"
+                            maxlength="300"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                        <div class="character-count">
+                            <span id="characterCount">
+                                0
+                            </span>
+                            / 300 characters
+                        </div>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="send-btn"
+                    >
+                        📨 Send Message
+                    </button>
+
+
+                    <!-- SUCCESS -->
+
+                    <div
+                        id="successMessage"
+                        class="success-message hidden"
+                    >
+
+                        <span>✅</span>
+
+                        <div>
+
+                            <strong>
+                                Message Ready!
+                            </strong>
+
+                            <p>
+                                Thanks for reaching out!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+
+                <div class="contact-intro">
+
+                    <p class="small-title">
+                        GET IN TOUCH
+                    </p>
+
+                    <h2>
+                        Let's Connect 🤝
+                    </h2>
+
+                    <p>
+                        I am always happy to connect with
+                        people who are interested in coding,
+                        technology and web development.
+                    </p>
+                    <p>I would be happy to connect with you and share my coding journey.</p>
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📧
+                    </div>
+
+                    <div>
+
+                        <h3>Email</h3>
+
+                        <p>
+                            otieno272emmanuel@gmail.com
+                        </p>
+
+                        <button
+                            id="copyEmail"
+                            class="small-btn"
+                        >
+                            📋 Copy Email
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GITHUB -->
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        💻
+                    </div>
+
+                    <div>
+
+                        <h3>GitHub</h3>
+
+                        <p>
+                            My coding projects
+                        </p>
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            class="small-btn"
+                        >
+                            View GitHub →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h3>Location</h3>
+
+                        <p>
+                            Kenya 🇰🇪
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="availability-card">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Currently Learning
+                        </strong>
+
+                        <p>
+                            HTML • CSS • JavaScript
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
 
-        <section class="contact-container">
+        <!-- BOTTOM MESSAGE -->
 
+        <section class="contact-cta">
 
-            <form id="contactForm" class="contact-form">
+            <div>
 
-                <h2>Send a Message</h2>
+                <span class="cta-icon">
+                    🚀
+                </span>
 
-
-                <label for="name">
-                    Name
-                </label>
-
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                >
-
-
-                <label for="email">
-                    Email
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email"
-                    required
-                >
-
-
-                <label for="message">
-                    Message
-                </label>
-
-                <textarea
-                    id="message"
-                    rows="6"
-                    placeholder="Write your message"
-                    required
-                ></textarea>
-
-
-                <button
-                    type="submit"
-                    class="btn"
-                >
-                    📨 Send Message
-                </button>
-
-
-                <p id="formMessage"></p>
-
-            </form>
-
-
-            <div class="contact-info">
-
-                <h2>📞 Get In Touch</h2>
+                <h2>
+                    Let's Build Something Amazing
+                </h2>
 
                 <p>
-                    I would be happy to hear from you.
+                    Every coding project is another
+                    step in my learning journey.
                 </p>
 
-                <p>📧 Email: emmanuel@example.com</p>
-
-                <p>💻 GitHub: My GitHub Profile</p>
-
-                <p>📍 Location: Kenya</p>
-
             </div>
+
+            <a
+                href="about.html"
+                class="cta-btn"
+            >
+                View My Skills →
+            </a>
 
         </section>
 
     </main>
 
 
+    <!-- FOOTER -->
+
     <footer>
 
+        <h3>
+            💻 My Digital Learner Profile
+        </h3>
+
         <p>
-            © 2026 Emmanuel | My Digital Learner Profile
+            Learning HTML • CSS • JavaScript
+        </p>
+
+        <p>
+            © 2026 Emmanuel | Keep Learning 🚀
         </p>
 
     </footer>
 
 
     <script src="script.js"></script>
+<script>// =================================
+// CONTACT FORM
+// =================================
 
+const contactForm =
+    document.getElementById("contactForm");
+
+const successMessage =
+    document.getElementById("successMessage");
+
+const message =
+    document.getElementById("message");
+
+const characterCount =
+    document.getElementById("characterCount");
+
+
+if (message && characterCount) {
+
+    message.addEventListener("input", function () {
+
+        characterCount.textContent =
+            message.value.length;
+
+    });
+
+}
+
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+
+            if (name === "" || email === "") {
+
+                alert(
+                    "Please fill in your name and email."
+                );
+
+                return;
+
+            }
+
+
+            successMessage.classList.remove("hidden");
+
+            contactForm.reset();
+
+            characterCount.textContent = "0";
+
+        }
+    );
+
+}
+
+
+// =================================
+// COPY EMAIL
+// =================================
+
+const copyEmail =
+    document.getElementById("copyEmail");
+
+
+if (copyEmail) {
+
+    copyEmail.addEventListener(
+        "click",
+        async function () {
+
+            const email =
+                "otieno272emmnuel@gmail.com";
+
+            try {
+
+                await navigator.clipboard.writeText(email);
+
+                copyEmail.textContent =
+                    "✓ Email Copied!";
+
+                setTimeout(function () {
+
+                    copyEmail.textContent =
+                        "📋 Copy Email";
+
+                }, 2000);
+
+            } catch (error) {
+
+                alert(
+                    "Email: " + email
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+// =================================
+// DARK / LIGHT MODE
+// =================================
+
+const themeBtn =
+    document.getElementById("themeBtn");
+
+
+if (themeBtn) {
+
+    themeBtn.addEventListener(
+        "click",
+        function () {
+
+            document.body.classList.toggle(
+                "dark-mode"
+            );
+
+
+            if (
+                document.body.classList.contains(
+                    "dark-mode"
+                )
+            ) {
+
+                themeBtn.textContent = "☀️";
+
+            } else {
+
+                themeBtn.textContent = "🌙";
+
+            }
+
+        }
+    );
+
+}</script>
+<style>/* =================================
+   CONTACT PAGE
+================================= */
+
+.contact-hero {
+    text-align: center;
+
+    padding: 90px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #eff6ff,
+            #ffffff
+        );
+}
+
+.contact-icon {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.1);
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+.contact-hero h1 {
+    font-size: 52px;
+
+    margin: 5px 0 10px;
+}
+
+.contact-hero > p:last-child {
+    color: #4b5563;
+
+    font-size: 18px;
+}
+
+
+/* =================================
+   CONTACT CONTAINER
+================================= */
+
+.contact-container {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+/* =================================
+   TWO COLUMNS
+================================= */
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* =================================
+   FORM CARD
+================================= */
+
+.contact-form-card {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.contact-form-card:hover {
+    box-shadow:
+        0 20px 50px rgba(37,99,235,0.12);
+}
+
+
+/* =================================
+   FORM HEADING
+================================= */
+
+.form-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.form-heading > span {
+    font-size: 40px;
+}
+
+.form-heading h2 {
+    margin: 0;
+
+    font-size: 30px;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,0.1);
+}
+
+
+/* =================================
+   CHARACTER COUNTER
+================================= */
+
+.character-count {
+    text-align: right;
+
+    margin-top: 5px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =================================
+   SEND BUTTON
+================================= */
+
+.send-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37,99,235,0.25);
+}
+
+
+/* =================================
+   SUCCESS MESSAGE
+================================= */
+
+.success-message {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border-radius: 10px;
+
+    animation: appear 0.4s ease;
+}
+
+.success-message > span {
+    font-size: 25px;
+}
+
+.success-message p {
+    margin: 2px 0 0;
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =================================
+   CONTACT INFORMATION
+================================= */
+
+.contact-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-intro {
+    margin-bottom: 10px;
+}
+
+.contact-intro h2 {
+    font-size: 30px;
+
+    margin: 5px 0 10px;
+}
+
+.contact-intro > p:last-child {
+    color: #6b7280;
+}
+
+
+/* =================================
+   INFORMATION CARDS
+================================= */
+
+.info-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: light blue;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateX(6px);
+
+    box-shadow:
+        0 12px 30px rgba(37,99,235,0.12);
+}
+
+.info-icon {
+    min-width: 55px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #dbeafe;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.info-card h3 {
+    margin-bottom: 3px;
+}
+
+.info-card p {
+    color: #6b7280;
+
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   SMALL BUTTON
+================================= */
+
+.small-btn {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #fdefffff;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.small-btn:hover {
+    background: #2563eb;
+
+    color: purple;
+}
+
+
+/* =================================
+   LEARNING STATUS
+================================= */
+
+.availability-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 12px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px rgba(34,197,94,0.15);
+
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(34,197,94,0.4);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 8px rgba(34,197,94,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(34,197,94,0);
+    }
+
+}
+
+.availability-card p {
+    margin: 2px 0 0;
+
+    color: #4c6516ff;
+}
+
+
+/* =================================
+   BOTTOM CTA
+================================= */
+
+.contact-cta {
+    margin-top: 60px;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    color: yellow;
+
+    background:
+        linear-gradient(
+            146deg,
+            #15561fff,
+            #661a8aff
+        );
+
+    border-radius: 20px;
+}
+
+.cta-icon {
+    font-size: 35px;
+}
+
+.contact-cta h2 {
+    margin: 5px 0;
+
+    font-size: 30px;
+}
+
+.contact-cta p {
+    color: #dbeafe;
+}
+
+.cta-btn {
+    display: inline-block;
+
+    padding: 13px 20px;
+
+    background: red;
+
+    color: #2e4a8a;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* =================================
+   CONTACT DARK MODE
+================================= */
+
+body.dark-mode .contact-hero {
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e3a8a
+        );
+}
+
+body.dark-mode .contact-hero > p:last-child {
+    color: #d1d5db;
+}
+
+body.dark-mode .contact-form-card,
+body.dark-mode .info-card {
+    background: #1f2937;
+
+    color: white;
+}
+
+body.dark-mode .contact-intro > p:last-child,
+body.dark-mode .info-card p {
+    color: #d1d5db;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: #111827;
+
+    color: white;
+
+    border-color: #374151;
+}
+
+body.dark-mode .info-icon {
+    background: #374151;
+}
+
+
+/* =================================
+   CONTACT MOBILE
+================================= */
+
+@media (max-width: 800px) {
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 42px;
+    }
+
+    .contact-cta {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contact-form-card {
+        padding: 25px;
+    }
+
+    .contact-container {
+        padding: 50px 15px;
+    }
+
+    .info-card {
+        padding: 18px;
+    }
+
+}</style>
 </body>
 
 </html>
