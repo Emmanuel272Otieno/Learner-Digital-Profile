@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Digital Learner Profile</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav class="navbar">
-
+<header>
+    <nav>
         <h2>💻 Learner Profile</h2>
 
         <div class="nav-links">
@@ -20,186 +19,386 @@
             <a href="images.html">Images</a>
             <a href="contact.html">Contact</a>
         </div>
-
     </nav>
+</header>
 
+<main>
 
-    <main>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="small-title">MY CODING JOURNEY</p>
 
-        <section class="hero">
-
-            <div class="hero-text">
-
-                <p class="small-title">
-                    MY CODING JOURNEY
-                </p>
-
-                <h1>
-                    My Digital
-                    <span>Learner Profile</span>
-                </h1>
-
-                <p>
-                    Track my coding journey and goals as I learn
-                    HTML, CSS and JavaScript.
-                </p>
-
-                <a href="about.html" class="btn">
-                    Learn About Me
-                </a>
-
-                <a href="images.html" class="btn second-btn">
-                    View My Work
-                </a>
-
-            </div>
-
-            <div class="hero-image">
-
-                <img
-                    src="images/hero-coding-illustration.png"
-                    alt="Coding illustration"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- Learner Profile -->
-
-        <section class="section">
-
-            <h2>👤 Learner Profile</h2>
-
-            <div class="profile-card">
-
-                <img
-                    src="images/profile-photo.png"
-                    alt="Learner profile photo"
-                >
-
-                <div>
-
-                    <h3>Emmanuel</h3>
-
-                    <p>
-                        <strong>Learning:</strong>
-                        Web Development
-                    </p>
-
-                    <p>
-                        <strong>Skills:</strong>
-                        HTML, CSS and JavaScript
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Coding Goals -->
-
-        <section class="section">
-
-            <h2>🎯 My Coding Goals</h2>
-
-            <div class="goal-card">
-
-                <ul id="goalList">
-
-                    <li>Learn HTML</li>
-
-                    <li>Learn CSS</li>
-
-                    <li>Learn JavaScript</li>
-
-                    <li>Create a personal portfolio</li>
-
-                </ul>
-
-
-                <div class="goal-form">
-
-                    <input
-                        type="text"
-                        id="goalInput"
-                        placeholder="Enter a new coding goal"
-                    >
-
-                    <button
-                        id="addGoalBtn"
-                        class="btn"
-                    >
-                        Add Goal
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Goal Counter -->
-
-        <section class="counter-card">
-
-            <h2>📊 Goals Counter</h2>
+            <h1>My Digital<br>
+                <span>Learner Profile</span>
+            </h1>
 
             <p>
-                You have
-                <strong id="goalCount">4</strong>
-                coding goals.
+                Track my coding journey and goals as I learn
+                HTML, CSS and JavaScript.
             </p>
 
-        </section>
+            <div class="buttons">
+                <a href="about.html" class="btn">Learn About Me</a>
+                <a href="images.html" class="btn secondary">View My Work</a>
+            </div>
+        </div>
 
+        <div class="hero-image">
+            <img src="images/coding.jpg" alt="Coding illustration">
+        </div>
+    </section>
 
-        <!-- Technique -->
+    <section class="profile">
+        <p class="section-title"> LEARNER PROFILE</p>
 
-        <section class="technique-card">
+        <div class="profile-card">
+
+            <img src="images/profile.jpg"
+                 alt="Emmanuel profile photo"
+                 class="profile-photo">
 
             <div>
+                <h2>Emmanuel</h2>
 
-                <p class="small-title">
-                    DAILY PRACTICE
+                <p><strong>Learning:</strong> Web Development</p>
+
+                <p>
+                    <strong>Skills:</strong>
+                    HTML, CSS and JavaScript
                 </p>
-
-                <h2>
-                    💡 Technique of the Day
-                </h2>
-
-                <p id="techniqueText">
-                    Practice solving small coding problems.
-                </p>
-
             </div>
 
-            <button
-                id="techniqueBtn"
-                class="btn"
-            >
-                Show Technique
-            </button>
+        </div>
+    </section>
 
-        </section>
+    <section class="goals">
+        <p class="section-title">🎯 MY CODING GOALS</p>
 
-    </main>
+        <div id="goalList">
 
+            <div class="goal">💻 Learn HTML</div>
+            <div class="goal">🎨 Learn CSS</div>
+            <div class="goal">⚡ Learn JavaScript</div>
+            <div class="goal">🌐 Create a personal portfolio</div>
 
-    <footer>
+        </div>
 
-        <p>
-            © 2026 Emmanuel | My Digital Learner Profile
+        <button id="addGoal">+ Add Goal</button>
+
+        <p class="counter">
+            You have <strong id="goalCount">4</strong> coding goals.
         </p>
+    </section>
 
-    </footer>
+    <section class="technique">
 
+        <p class="section-title">💡 TECHIE OF THE DAY</p>
 
-    <script src="script.js"></script>
+        <div class="techie-card">
+            <p id="techieText">
+                Practice solving small coding problems.
+            </p>
+
+            <button id="showTechnique">
+                Show Techie
+            </button>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Emmanuel | My Digital Learner Profile</p>
+</footer>
+
+<script src="script.js"></script>
+<script>const addGoalButton = document.getElementById("addGoal");
+const goalList = document.getElementById("goalList");
+const goalCount = document.getElementById("goalCount");
+
+addGoalButton.addEventListener("click", function () {
+
+    const newGoal = prompt("Enter your new coding goal:");
+
+    if (newGoal && newGoal.trim() !== "") {
+
+        const goal = document.createElement("div");
+
+        goal.className = "goal";
+
+        goal.textContent = "🚀 " + newGoal;
+
+        goalList.appendChild(goal);
+
+        goalCount.textContent =
+            goalList.children.length;
+    }
+
+});
+
+const showTechniqueButton =
+    document.getElementById("showTechnique");
+
+const techniqueText =
+    document.getElementById("techniqueText");
+
+const techniques = [
+    "Practice solving small coding problems.",
+    "Write a little JavaScript every day.",
+    "Build small projects instead of only reading tutorials.",
+    "Learn from your coding mistakes.",
+    "Practice HTML and CSS by creating web pages."
+];
+
+showTechniqueButton.addEventListener("click", function () {
+
+    const randomNumber =
+        Math.floor(Math.random() * techniques.length);
+
+    techniqueText.textContent =
+        techniques[randomNumber];
+
+});</script>
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: lightgreen;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e8f5e9;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #111827;
+    color: white;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* HERO */
+
+.hero {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: white;
+    border-radius: 20px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-title,
+.section-title {
+    color: #2563eb;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero-text > p {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* BUTTONS */
+
+.buttons {
+    margin-top: 25px;
+}
+
+.btn,
+button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn.secondary {
+    background: #111827;
+    margin-left: 10px;
+}
+
+.btn:hover,
+button:hover {
+    opacity: 0.85;
+}
+
+/* SECTIONS */
+
+section {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 40px;
+}
+
+.profile-card {
+    margin-top: 20px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* GOALS */
+
+#goalList {
+    margin: 20px 0;
+}
+
+.goal {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.counter {
+    margin-top: 20px;
+}
+
+/* TECHNIQUE */
+
+.technique-card {
+    margin-top: 20px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+#techniqueText {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    section {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}</style>
+
+    
 
 </body>
 </html>
