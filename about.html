@@ -1,82 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>About Me</title>
+    <title>About | Learner Profile</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
+    <!-- NAVIGATION -->
     <nav class="navbar">
 
-        <h2>💻 Learner Profile</h2>
+        <a href="index.html" class="logo">
+            💻 Learner Profile
+        </a>
 
-        <div class="nav-links">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About</a>
-
-            <a href="images.html">Images</a>
-
-            <a href="contact.html">Contact</a>
-
-        </div>
+        <button id="themeBtn" class="theme-btn">
+            🌙
+        </button>
 
     </nav>
 
 
+    <!-- PAGE INTRO -->
+    <header class="about-hero">
+
+        <div class="hero-circle">👤</div>
+
+        <p class="small-title">
+            GET TO KNOW ME
+        </p>
+
+        <h1>About Me</h1>
+
+        <p>
+            Learn more about my coding journey,
+            skills and goals.
+        </p>
+
+    </header>
+
+
     <main>
 
-        <section class="page-header">
 
-            <p class="small-title">
-                GET TO KNOW ME
-            </p>
+        <!-- PROFILE -->
+        <section class="about-section">
 
-            <h1>👤 About Me</h1>
+            <div class="profile-card">
 
-            <p>
-                Learn more about my coding journey and skills.
-            </p>
+                <div class="profile-photo-container">
+
+                    <img
+                        src="images/profile.jpg"
+                        alt="Emmanuel profile photo"
+                    >
+
+                    <span class="online-dot"></span>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <span class="profile-label">
+                        👋 HELLO, I'M
+                    </span>
+
+                    <h2>Emmanuel</h2>
+
+                    <h3>
+                        Future Web Developer 💻
+                    </h3>
+
+                    <p>
+                        I am learning web development and
+                        building my skills through coding
+                        projects.
+                    </p>
+
+                    <button
+                        id="storyBtn"
+                        class="primary-btn"
+                    >
+                        Read My Story
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- HIDDEN STORY -->
+
+            <div
+                id="story"
+                class="story-box hidden"
+            >
+
+                <h3>🚀 My Coding Journey</h3>
+
+                <p>
+                    My coding journey started with learning
+                    HTML. I then started learning CSS to
+                    make my websites look better and
+                    JavaScript to make them interactive.
+                </p>
+
+                <p>
+                    Every project gives me an opportunity
+                    to learn something new and improve my
+                    coding skills.
+                </p>
+
+            </div>
 
         </section>
 
 
-        <section class="about-card">
+        <!-- SKILLS -->
+        <section class="about-section">
 
-            <img
-                src="images/profile-photo.png"
-                alt="Learner profile"
-            >
+            <div class="section-heading">
 
-            <div>
+                <span>🧠</span>
 
-                <h2>Emmanuel</h2>
+                <div>
+                    <p class="small-title">
+                        MY SKILLS
+                    </p>
 
-                <p>
-                    I am learning web development and building
-                    my skills through coding projects.
-                </p>
+                    <h2>
+                        What I Am Learning
+                    </h2>
+                </div>
 
-                <h3>My Skills</h3>
+            </div>
 
-                <div class="skills">
 
-                    <span>HTML</span>
+            <div class="skills-grid">
 
-                    <span>CSS</span>
 
-                    <span>JavaScript</span>
+                <!-- HTML -->
+
+                <div class="interactive-skill">
+
+                    <div class="skill-top">
+
+                        <span class="skill-name">
+                            🌐 HTML
+                        </span>
+
+                        <span>
+                            75%
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress html-progress"
+                        ></div>
+
+                    </div>
+
+                    <p>
+                        Learning webpage structure
+                        and semantic HTML.
+                    </p>
+
+                </div>
+
+
+                <!-- CSS -->
+
+                <div class="interactive-skill">
+
+                    <div class="skill-top">
+
+                        <span class="skill-name">
+                            🎨 CSS
+                        </span>
+
+                        <span>
+                            60%
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress css-progress"
+                        ></div>
+
+                    </div>
+
+                    <p>
+                        Learning layouts, colours,
+                        animations and responsive design.
+                    </p>
+
+                </div>
+
+
+                <!-- JAVASCRIPT -->
+
+                <div class="interactive-skill">
+
+                    <div class="skill-top">
+
+                        <span class="skill-name">
+                            ⚡ JavaScript
+                        </span>
+
+                        <span>
+                            40%
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress js-progress"
+                        ></div>
+
+                    </div>
+
+                    <p>
+                        Learning variables, functions,
+                        events and DOM interaction.
+                    </p>
 
                 </div>
 
@@ -85,61 +251,826 @@
         </section>
 
 
-        <section class="two-cards">
+        <!-- LEARNING -->
+        <section class="about-section">
 
-            <div class="card">
+            <div class="section-heading">
 
-                <h2>📚 What I Am Learning</h2>
+                <span>📚</span>
 
-                <ul>
+                <div>
 
-                    <li>HTML</li>
+                    <p class="small-title">
+                        MY LEARNING
+                    </p>
 
-                    <li>CSS</li>
+                    <h2>
+                        Things I Am Learning
+                    </h2>
 
-                    <li>JavaScript</li>
+                </div>
 
-                    <li>Web Development</li>
+            </div>
 
-                </ul>
+
+            <div class="learning-grid">
+
+                <div class="learning-card">
+                    <span>🌐</span>
+                    <h3>HTML</h3>
+                    <p>
+                        Building webpages.
+                    </p>
+                </div>
+
+
+                <div class="learning-card">
+                    <span>🎨</span>
+                    <h3>CSS</h3>
+                    <p>
+                        Styling websites.
+                    </p>
+                </div>
+
+
+                <div class="learning-card">
+                    <span>⚡</span>
+                    <h3>JavaScript</h3>
+                    <p>
+                        Adding interaction.
+                    </p>
+                </div>
+
+
+                <div class="learning-card">
+                    <span>💻</span>
+                    <h3>Web Development</h3>
+                    <p>
+                        Building complete websites.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GOALS -->
+        <section class="about-section">
+
+            <div class="section-heading">
+
+                <span>🚀</span>
+
+                <div>
+
+                    <p class="small-title">
+                        MY FUTURE
+                    </p>
+
+                    <h2>
+                        My Goals
+                    </h2>
+
+                </div>
 
             </div>
 
 
-            <div class="card">
+            <div class="goals-grid">
 
-                <h2>🚀 My Goals</h2>
+                <div class="goal-card">
+                    <span>🌐</span>
+                    <h3>Build Websites</h3>
+                    <p>
+                        Create useful and attractive websites.
+                    </p>
+                </div>
 
-                <ul>
 
-                    <li>Build websites</li>
+                <div class="goal-card">
+                    <span>📁</span>
+                    <h3>Create a Portfolio</h3>
+                    <p>
+                        Showcase my coding projects.
+                    </p>
+                </div>
 
-                    <li>Create a portfolio</li>
 
-                    <li>Improve my coding</li>
+                <div class="goal-card">
+                    <span>📈</span>
+                    <h3>Improve My Coding</h3>
+                    <p>
+                        Practice coding and solve problems.
+                    </p>
+                </div>
 
-                    <li>Become a web developer</li>
 
-                </ul>
+                <div class="goal-card">
+                    <span>🚀</span>
+                    <h3>Become a Web Developer</h3>
+                    <p>
+                        Continue learning and building projects.
+                    </p>
+                </div>
 
             </div>
+
+        </section>
+
+
+        <!-- CALL TO ACTION -->
+
+        <section class="about-cta">
+
+            <h2>
+                🚀 My Coding Journey Is Just Beginning
+            </h2>
+
+            <p>
+                Every line of code is another step forward.
+            </p>
+
+            <a
+                href="contact.html"
+                class="primary-btn"
+            >
+                Contact Me
+            </a>
 
         </section>
 
     </main>
 
 
+    <!-- FOOTER -->
+
     <footer>
 
+        <h3>
+            💻 My Digital Learner Profile
+        </h3>
+
         <p>
-            © 2026 Emmanuel | My Digital Learner Profile
+            Learning HTML • CSS • JavaScript
+        </p>
+
+        <p>
+            © 2026 Emmanuel
         </p>
 
     </footer>
 
 
     <script src="script.js"></script>
+<script>// =================================
+// ABOUT PAGE - MY STORY
+// =================================
 
+const storyBtn = document.getElementById("storyBtn");
+const story = document.getElementById("story");
+
+if (storyBtn && story) {
+
+    storyBtn.addEventListener("click", function () {
+
+        story.classList.toggle("hidden");
+
+        if (story.classList.contains("hidden")) {
+
+            storyBtn.textContent = "Read My Story";
+
+        } else {
+
+            storyBtn.textContent = "Hide My Story";
+
+        }
+
+    });
+
+}
+
+
+// =================================
+// DARK / LIGHT MODE
+// =================================
+
+const themeBtn = document.getElementById("themeBtn");
+
+if (themeBtn) {
+
+    themeBtn.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        if (
+            document.body.classList.contains("dark-mode")
+        ) {
+
+            themeBtn.textContent = "☀️";
+
+        } else {
+
+            themeBtn.textContent = "🌙";
+
+        }
+
+    });
+
+}</script>
+
+<style>/* =================================
+   ABOUT PAGE
+================================= */
+
+.about-hero {
+    text-align: center;
+    padding: 90px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #eff6ff,
+            #ffffff
+        );
+}
+
+.hero-circle {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-hero h1 {
+    font-size: 55px;
+    margin: 5px 0 10px;
+}
+
+.about-hero > p:last-child {
+    color: #4b5563;
+    font-size: 18px;
+}
+
+
+/* =================================
+   ABOUT SECTIONS
+================================= */
+
+.about-section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+/* =================================
+   PROFILE CARD
+================================= */
+
+.profile-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 50px rgba(37,99,235,0.15);
+}
+
+.profile-photo-container {
+    position: relative;
+
+    min-width: 220px;
+}
+
+.profile-photo-container img {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 7px solid #dbeafe;
+}
+
+.online-dot {
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    background: #22c55e;
+
+    border: 4px solid white;
+
+    border-radius: 50%;
+
+    bottom: 20px;
+    right: 15px;
+}
+
+.profile-label {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.profile-details h2 {
+    font-size: 40px;
+
+    margin: 5px 0;
+}
+
+.profile-details h3 {
+    color: #2563eb;
+
+    margin-bottom: 15px;
+}
+
+.profile-details p {
+    color: #6b7280;
+
+    max-width: 600px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.primary-btn {
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(37,99,235,0.25);
+}
+
+
+/* =================================
+   STORY
+================================= */
+
+.story-box {
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 10px;
+
+    animation: slideDown 0.4s ease;
+}
+
+.story-box h3 {
+    margin-bottom: 10px;
+}
+
+.story-box p {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slideDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.section-heading > span {
+    font-size: 40px;
+}
+
+.section-heading h2 {
+    margin: 0;
+}
+
+
+/* =================================
+   SKILLS
+================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.interactive-skill {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.interactive-skill:hover {
+    transform: translateY(-7px);
+}
+
+.skill-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    font-weight: bold;
+}
+
+.skill-name {
+    font-size: 18px;
+}
+
+.progress-bar {
+    height: 10px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 15px;
+}
+
+.progress {
+    height: 100%;
+
+    border-radius: 20px;
+
+    animation: growProgress 1.5s ease;
+}
+
+.html-progress {
+    width: 75%;
+    background: #f97316;
+}
+
+.css-progress {
+    width: 60%;
+    background: #2563eb;
+}
+
+.js-progress {
+    width: 40%;
+    background: #eab308;
+}
+
+.interactive-skill p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+@keyframes growProgress {
+
+    from {
+        width: 0;
+    }
+
+}
+
+
+/* =================================
+   LEARNING CARDS
+================================= */
+
+.learning-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.learning-card {
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.learning-card:hover {
+    transform: translateY(-8px);
+
+    background: #eff6ff;
+}
+
+.learning-card span {
+    font-size: 40px;
+}
+
+.learning-card h3 {
+    margin: 12px 0 5px;
+}
+
+.learning-card p {
+    color: #6b7280;
+}
+
+
+/* =================================
+   GOALS
+================================= */
+
+.goals-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.goal-card {
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #2563eb;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.goal-card:hover {
+    transform: translateX(8px);
+}
+
+.goal-card span {
+    font-size: 30px;
+}
+
+.goal-card h3 {
+    margin: 8px 0;
+}
+
+.goal-card p {
+    color: #6b7280;
+}
+
+
+/* =================================
+   CALL TO ACTION
+================================= */
+
+.about-cta {
+    max-width: 1100px;
+
+    margin: 20px auto 80px;
+
+    padding: 55px 25px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e3a8a
+        );
+
+    border-radius: 25px;
+}
+
+.about-cta h2 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.about-cta p {
+    margin-bottom: 25px;
+
+    color: #dbeafe;
+}
+
+
+/* =================================
+   DARK MODE BUTTON
+================================= */
+
+.theme-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* =================================
+   DARK MODE
+================================= */
+
+body.dark-mode {
+    background: #111827;
+
+    color: #f9fafb;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .interactive-skill,
+body.dark-mode .learning-card,
+body.dark-mode .goal-card {
+    background: #1f2937;
+
+    color: white;
+}
+
+body.dark-mode .about-hero {
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e3a8a
+        );
+}
+
+body.dark-mode .about-hero > p:last-child,
+body.dark-mode .interactive-skill p,
+body.dark-mode .learning-card p,
+body.dark-mode .goal-card p,
+body.dark-mode .profile-details p {
+    color: #d1d5db;
+}
+
+body.dark-mode .learning-card:hover {
+    background: #374151;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 800px) {
+
+    .profile-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 42px;
+    }
+
+    .section-heading {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo-container img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-details h2 {
+        font-size: 32px;
+    }
+
+}</style>
 </body>
-
 </html>
